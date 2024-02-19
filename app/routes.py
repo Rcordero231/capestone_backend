@@ -26,8 +26,7 @@ def get_users():
 def get_user_id():
     current_user = get_jwt_identity()
     user = db.session.get(User, current_user)
-    
-    
+
     if user:
         return user.to_dict()
     else:
